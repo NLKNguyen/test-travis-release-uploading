@@ -1,0 +1,18 @@
+language: cpp
+
+compiler:
+  - gcc
+
+script:
+  - g++ -o output hello.cpp
+
+deploy:
+  provider: releases
+  api_key:
+    secure: BxL4tY/eRLkYvEeW0YWPHkQOpkQjeYQ+/M7fWM2Nqr8JT4795gPxVYNasvC9GSv12Y4KXePP/DQApLvq8fhMwbCaILgrq2MHglkiHQdiisapn33DZuqF76nZ/wwTQRuc3WKGk+5eguIC1WKdT6tsogN+eY3F2ejRLnoWq4phwScLO0MVDAHvR9b8FdJdhvfZIrC3rBD+JG1EKroflWqFcP9CAMUWKqZQY/BoraWF77FE380J6s6qLyW+YMuOfjbAI2k4LZpbSaveacMO2abkyAYB+34iOXPmxLq3VUuA67lljPwY++b5OAGyv/CNZtdgHOziQwo/Z3M4JHaEAqPpAosijtqqQQ6hpYNp631Dn68DYIPbkjX+R7KEJu+AKzBUtKuS+j+eT+GvKXiBRG62hc+OarAaPZK7geTgoq0Ix1ju1di2cQxoRHA+7OZuHCaYOueExY0VDga1efP9PP7etlMhOWLCQVlCa9C1QZay+12lloDk2pZfORETHB+eI3c4ZoAja0iB59HVvibPLLaei/ZnZOMhOqvykLz9hAp0ttDvrjIk66+W6FQZjRO5A31u9KPdIMUne7Y16qWXl/q5oeSyuPQsMC3K2TgphEEilFsOO8ui7O4oAM0+XBbFETJJm4lNfnF05HrB0APSJG7Nlh4Vkoci7QmuIoGIfaIHPto=
+  file: output
+  overwrite: true
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: NLKNguyen/test-travis-release-uploading
